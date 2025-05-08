@@ -23,7 +23,7 @@ Este é um aplicativo gráfico (GUI) desenvolvido em Go com a biblioteca Fyne pa
 
 ## Dependências
 
-*   **Go:** Versão 1.18 ou superior.
+*   **Go:** Versão 1.24 ou superior.
 *   **Bibliotecas Go:** As dependências são gerenciadas pelo Go Modules (arquivos `go.mod` e `go.sum`). A principal dependência externa para a GUI é `fyne.io/fyne/v2`.
 *   **Dependências do Fyne (Linux):** Para compilar e executar aplicativos Fyne no Linux, você precisará de algumas bibliotecas de desenvolvimento C e drivers gráficos. O comando de instalação varia ligeiramente dependendo da sua distribuição.
 
