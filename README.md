@@ -13,13 +13,11 @@ Este é um aplicativo gráfico (GUI) desenvolvido em Go com a biblioteca Fyne pa
 *   **Verificação de Endereços:** Conecta-se a uma fonte de blockchain selecionada (Blockstream.info ou um nó Bitcoin Core local via RPC) para verificar se os endereços gerados possuem transações ou saldo.
 *   **Busca de Endereço Individual:** Permite colar um endereço Bitcoin e buscar se ele pertence à seed carregada, verificando os caminhos BIP44, BIP49, BIP84 e BIP86, tanto para change 0 quanto para change 1, até um limite de índice configurável.
 *   **Interface Gráfica Amigável:** Oferece uma interface intuitiva para realizar todas as operações.
-*   **Tema Escuro (Opcional):** Suporte para tema escuro através de variável de ambiente para melhor conforto visual.
 
 ## Melhorias Recentes
 
 *   **Exibição da Master Fingerprint:** A master fingerprint da seed agora é exibida acima das XPUBs, com um botão para copiar, facilitando a importação em carteiras watch-only.
 *   **Rolagem Infinita de Endereços:** Ao carregar mais endereços, eles são adicionados à lista existente em vez de substituí-la, permitindo a visualização de um grande número de endereços de forma contínua.
-*   **Instruções para Tema Escuro:** Adicionadas instruções sobre como ativar o tema escuro.
 
 ## Dependências
 
