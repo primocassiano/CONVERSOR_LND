@@ -80,3 +80,45 @@ Após a compilação bem-sucedida, você pode executar o aplicativo diretamente 
 A interface gráfica será iniciada, permitindo que você utilize as funcionalidades descritas acima.
 
 **Observação sobre Nó Local (RPC):** Se você optar por usar a fonte de dados "Nó Local (RPC)", certifique-se de que seu nó Bitcoin Core esteja em execução, configurado corretamente para aceitar conexões RPC (com usuário e senha definidos no `bitcoin.conf`, se necessário) e que o `addressindex=1` (ou `addrindex=1`) esteja habilitado para a funcionalidade de verificação de saldo via `scantxoutset`.
+
+## 🔐 Verificação de Assinatura PGP
+
+Este projeto fornece executáveis para Linux e Windows junto com suas respectivas assinaturas digitais. Para garantir a legitimidade e integridade dos arquivos, siga os passos abaixo para verificar as assinaturas PGP.
+
+### 📥 1. Importe a chave pública do autor
+
+```bash
+gpg --import signature/publickey.asc
+```
+
+Você pode verificar o fingerprint da chave importada com:
+
+```bash
+gpg --fingerprint primo.cassiano@gmail.com
+```
+
+> A chave correta deve ter o fingerprint correspondente ao autor. Certifique-se de verificar com uma fonte confiável.
+
+---
+
+### ✅ 2. Verifique os executáveis
+
+#### Para o executável Linux:
+
+```bash
+gpg --verify signature/CONVERSOR_LND_LINUX.sig ../CONVERSOR_LND_LINUX
+```
+
+#### Para o executável Windows:
+
+```bash
+gpg --verify signature/CONVERSOR_LND_WINDOWS.sig ../CONVERSOR_LND_WINDOWS.exe
+```
+
+Se a verificação for bem-sucedida, você verá uma mensagem como:
+
+```
+Good signature from "Cassiano <primo.cassiano@gmail.com>"
+```
+
+Isso garante que o arquivo não foi alterado desde a sua assinatura e é legítimo.
